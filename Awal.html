@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Style.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script>
+   function hideElement() {
+            var h2Element = document.getElementById('ig-element');
+            var ancElement = document.getElementById('anc-element');
+            
+            // Menambahkan kelas hide ke h2 untuk animasi geser
+            h2Element.classList.add('hide');
+
+            // Menunggu hingga transisi selesai untuk menampilkan kembali anc
+            h2Element.addEventListener('transitionend', function() {
+                ancElement.style.display = 'block';
+
+                // Menghapus kelas hide dan menyembunyikan kembali anc setelah 3 detik
+                setTimeout(function() {
+                    h2Element.classList.remove('hide');
+                    ancElement.style.display = 'none';
+                }, 3000); // 3000 ms = 3 detik
+            }, { once: true }); // Menambahkan event listener hanya sekali
+        }
+</script>
+  <title>Document</title>
+</head>
+<style>
+  body {
+    background:linear-gradient(57deg, #4D869C 60%, #FF9F66 30%);
+    color: #EEF7FF;
+  }
+
+  div.scroll-container {
+    background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+  }
+
+  div.scroll-container img {
+    padding: 10px;
+  }
+
+  .ig{
+    background-color: #0A6847;
+    padding: 10px;
+    border: 5px solid;
+  }
+  .stoik{
+    border: 5px solid;
+  }
+</style>
+
+<body>
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="stoik bg-dark p-4">
+      <h4 class="text-white h3"><strong>#LikeStoikisme and Minimalist</strong></h4>
+    </div>
+  </div>
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>        
+      </button>  
+      
+      <div class="satu">
+        <div class="anc" id="anc-element">
+            <h2 class="message"><strong>Hayo Hilang</strong></h2>
+        </div>
+        <h2 class="ig" id="ig-element" onclick="hideElement()">
+            <strong>@nikola_ziuz</strong>
+        </h2>
+      </div>
+
+    </div>
+  </nav>
+  <!-- body -->
+  <div class="wrapper">
+    <div class="text-box">
+      <img class="dewe " src="img/st.jpg">
+        <h1>Hello </h1>
+        <p>Suka membicarakan hal hal random , paling suka membicarakan hal hal yang berkaitan dengan alam</P>
+        <p>Juga suka membicarakan tentang hal hal yang berkaitan dengan teknologi dan Uang</p>
+    </div>
+  </div>
+
+
+  <div class="fotbar">
+    <h2>FotBar Picks</h2>
+  </div>
+  <div class="scroll-container shadow">
+    <img src="img/badan.jpg">
+    <img src="img/bukber.jpg">
+    <img src="img/upacara.jpg">
+    <img src="img/circle.jpg">
+  </div>
+
+  <div class="fotbar">
+    <h2>Random Picks</h2>
+  </div>
+  <div class="scroll-container shadow">
+    <img src="img/kelas.jpg">
+    <img src="img/kuyon.jpg">
+    <img src="img/mutiara.jpg">
+    <img src="img/game.jpg">
+    <img src="img/glass.jpg">
+    <img src="img/sepatu.jpg">
+    <img src="img/web.jpg">
+  </div>
+
+  <div class="pollow">
+    <h2 class="mt-2">Klik 'Follow Me' to see My IG Account 👉<a href="https://www.instagram.com/nikola_ziuz?igsh=ZGd3bXdhMHUyMHV4"><button class="follow-btn">Follow Me</button></a></h1>
+  </div>
+
+  <div class="footer bg-dark">
+    <h2>"Lanjut Follow dan Dm di IG saja :)"</h2>
+  </div>
+</body>
+
+</html>

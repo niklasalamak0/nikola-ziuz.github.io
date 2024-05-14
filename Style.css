@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.wrapper {
+    margin: 100px auto; /* Margin otomatis di atas dan bawah, 200px di kiri dan kanan */
+    display: flex; /* Menggunakan flexbox */
+    justify-content: center; /* Pusatkan horizontal konten */
+    align-items: center; /* Pusatkan vertikal konten */
+    max-width: 800px; /* Contoh lebar maksimum untuk wrapper */
+    /* Sesuaikan lebar maksimum sesuai kebutuhan */
+}
+
+.dewe{
+    float: left;
+    max-width: 200px;
+    margin-right: 50px;
+}
+
+img {
+    max-width: 500px;
+    max-height: 500px;
+    border-radius: 10px;
+    margin-left: 20px; /* Menentukan radius sudut border */
+}
+
+.fotbar {
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #0A6847;
+}
+
+.shadow img {
+    transition: .5s ease;
+    }
+    
+.shadow img:hover{
+    box-shadow:
+    1px 1px #4D869C,
+    2px 2px #4D869C,
+    3px 3px #4D869C,
+    4px 4px #4D869C,
+    5px 5px #4D869C,
+    6px 6px #4D869C;
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+    transition: .5s ease;
+}
+.pollow:hover {
+    background-color: #FF9F66;
+    transform: scale(0.8); /* Mengecilkan ukuran elemen */
+}
+.pollow {
+    background-color: #0A6847;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 50px auto; /* Memusatkan secara horizontal */
+    max-width: 500px;
+    text-align: center; /* Memusatkan teks */
+    transition: transform 0.5s ease, background-color 0.5s ease;
+}
+
+.follow-btn {
+    background-color: #FFFFFF;
+    border: none;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: #0A6847;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.follow-btn:hover {
+    background-color: #4D869C;
+}
+
+h1, .text-box p {
+    opacity: 0;
+    transform: translateX(100%);
+    animation: slide-in 1s forwards;
+}
+
+h1 {
+    animation-delay: 0.5s; /* Delay animasi untuk h1 */
+}
+
+.text-box p {
+    animation-delay: 1s; /* Delay animasi untuk paragraf */
+}
+
+@keyframes slide-in {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.satu {
+    position: relative;
+    width: 300px; /* Sesuaikan dengan lebar yang diinginkan */
+    height: 100px; /* Sesuaikan dengan tinggi yang diinginkan */
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.anc, .ig {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.anc {
+    z-index: 1;
+    background-color: white;
+    color: #0A6847;
+    display: flex;
+    text-align: center;
+    margin-top: none;
+    border: 5px solid #0A6847; /* Awalnya disembunyikan */
+}
+
+.message{
+    text-align: center;
+}
+
+.ig {
+    z-index: 2;
+    background-color: #0A6847; /* Untuk melihat perbedaan posisi */
+    cursor: pointer;
+    transition: transform 0.8s ease;
+}
+
+.ig.hide {
+    transform: translateX(180%);
+}
+
+.footer{
+    padding: 20px;
+    text-align: center;
+    font-style: italic;
+}
